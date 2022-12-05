@@ -8,9 +8,20 @@
 #     summ += num[i]
 # print(f'{num}  сумма элементов списка, стоящих на нечётной позиции: {summ}')
 
-a = input(' введите число через пробел: ').split()
-i = 1
-while (i < len(a)//2+len(a) % 2):
-    num = len(a) - i-1
-    print(int(a[i])*int(a[num]), end=" ")
-    i+=1
+# a = input(' введите число через пробел: ').split()
+# i = 1
+# while (i < len(a)//2+len(a) % 2):
+#     num = len(a) - i-1
+#     print(int(a[i])*int(a[num]), end=" ")
+#     i+=1
+
+
+import random
+def sumofen(mass):
+    count = 0
+    for i in range(1, len(mass), 2):
+        count += mass[i]
+    print(count)
+a = [random.randint(1, 5)for i in range(6)]
+print(a)
+sumofen(a)
